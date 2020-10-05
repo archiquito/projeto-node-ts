@@ -1,9 +1,9 @@
 import express from 'express';
-import appointmentsRouter from './routes/appointments.routes';
+import routes from './routes';
 
 const app = express();
 
-app.use(appointmentsRouter);
+app.use(routes);
 
 app.get('/', (req, res) => {
   return res.json({ message: 'Hello World!' });
